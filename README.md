@@ -1,4 +1,4 @@
-# UPPAAL Meta-Model [![Java CI with Maven](https://github.com/uppaal-emf/uppaal-meta-model/actions/workflows/build.yml/badge.svg)](https://github.com/uppaal-emf/uppaal-meta-model/actions/workflows/build.yml)
+# UPPAAL Meta-Model [![Java CI with Maven](https://github.com/uppaal-emf/uppaal-metamodel/actions/workflows/build.yml/badge.svg)](https://github.com/uppaal-emf/uppaal-metamodel/actions/workflows/build.yml)
 An Eclipse EMF based Meta-Model for networks of timed automata as they appear in UPPAAL (https://uppaal.org/).
 Intended to be used as a library for other model based tooling.
 Depends on the Eclipse Modeling Framework and -Libraries. Built using Eclipse Tycho.

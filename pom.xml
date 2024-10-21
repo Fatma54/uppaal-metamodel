@@ -5,7 +5,7 @@
 	<version>${releaseVersion}${qualifier}</version>
 	<packaging>pom</packaging>
 
-	<name>uppaal-meta-model</name>
+	<name>uppaal-metamodel</name>
 	<description>An EMF Meta Model for timed automata as defined by the UPPAAL model-checking software.</description>
 
 	<licenses>
@@ -21,9 +21,9 @@
 	</organization>
 
 	<scm>
-		<url>https://github.com/uppaal-emf/uppaal-meta-model</url>
-		<connection>scm:git:https://github.com/uppaal-emf/uppaal-meta-model.git</connection>
-		<developerConnection>scm:git:https://github.com/uppaal-emf/uppaal-meta-model.git</developerConnection>
+		<url>https://github.com/uppaal-emf/uppaal-metamodel</url>
+		<connection>scm:git:https://github.com/uppaal-emf/uppaal-metamodel.git</connection>
+		<developerConnection>scm:git:https://github.com/uppaal-emf/uppaal-metamodel.git</developerConnection>
 	</scm>
 
 	<properties>
@@ -337,7 +337,7 @@
 				<repository>
 			      <id>github</id>
 			      <name>GitHub Packages</name>
-			      <url>https://maven.pkg.github.com/uppaal-emf/uppaal-meta-model</url>
+			      <url>https://maven.pkg.github.com/uppaal-emf/uppaal-metamodel</url>
 			    </repository>
 			</distributionManagement>
 		</profile>
