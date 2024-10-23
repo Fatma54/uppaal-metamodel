@@ -9,7 +9,8 @@ Bundle-ClassPath: .
 Bundle-Activator: org.muml.uppaal.presentation.UppaalEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.muml.uppaal.declarations.global.presentation,
+Export-Package: org.muml.uppaal.core.presentation,
+ org.muml.uppaal.declarations.global.presentation,
  org.muml.uppaal.declarations.presentation,
  org.muml.uppaal.declarations.system.presentation,
  org.muml.uppaal.expressions.presentation,

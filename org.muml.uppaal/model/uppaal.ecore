@@ -121,7 +121,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IdentifiableElement">
+    <eClassifiers xsi:type="ecore:EClass" name="IdentifiableElement" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Represents Elements that share a unique id"/>
       </eAnnotations>
