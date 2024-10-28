@@ -13,7 +13,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//NTA/systemDeclarations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//NTA/queries"/>
     </genClasses>
-    <nestedGenPackages prefix="Core" basePackage="org.uppaal.model" disposableProviderFactory="true"
+    <nestedGenPackages prefix="Core" basePackage="org.uppaal" disposableProviderFactory="true"
         ecorePackage="uppaal.ecore#//core">
       <genClasses image="false" ecoreClass="uppaal.ecore#//core/CallableElement"/>
       <genClasses image="false" ecoreClass="uppaal.ecore#//core/NamedElement">
@@ -30,7 +30,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//core/IdentifiableElement/id"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Types" basePackage="org.uppaal.model" resource="XML"
+    <nestedGenPackages prefix="Types" basePackage="org.uppaal" resource="XML"
         disposableProviderFactory="true" ecorePackage="uppaal.ecore#//types">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//types/BuiltInType">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//types/BuiltInType/INT"/>
@@ -67,7 +67,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//types/Library/types"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Declarations" basePackage="org.uppaal.model" resource="XML"
+    <nestedGenPackages prefix="Declarations" basePackage="org.uppaal" resource="XML"
         disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//declarations/DataVariablePrefix">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//declarations/DataVariablePrefix/CONST"/>
@@ -118,7 +118,7 @@
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//declarations/TypedDeclaration"/>
       <genClasses ecoreClass="uppaal.ecore#//declarations/ParameterContainer"/>
-      <nestedGenPackages prefix="Global" basePackage="org.uppaal.model.declarations"
+      <nestedGenPackages prefix="Global" basePackage="org.uppaal.declarations"
           resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/global">
         <genClasses ecoreClass="uppaal.ecore#//declarations/global/ChannelPriorityDeclaration">
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//declarations/global/ChannelPriorityDeclaration/groups"/>
@@ -132,7 +132,7 @@
         </genClasses>
         <genClasses ecoreClass="uppaal.ecore#//declarations/global/DefaultItem"/>
       </nestedGenPackages>
-      <nestedGenPackages prefix="System" basePackage="org.uppaal.model.declarations"
+      <nestedGenPackages prefix="System" basePackage="org.uppaal.declarations"
           resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/system">
         <genClasses ecoreClass="uppaal.ecore#//declarations/system/TemplateDeclaration">
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//declarations/system/TemplateDeclaration/declaredTemplate"/>
@@ -150,7 +150,7 @@
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Templates" basePackage="org.uppaal.model" resource="XML"
+    <nestedGenPackages prefix="Templates" basePackage="org.uppaal" resource="XML"
         disposableProviderFactory="true" ecorePackage="uppaal.ecore#//templates">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//templates/LocationKind">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//templates/LocationKind/NORMAL"/>
@@ -201,7 +201,7 @@
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//templates/Selection"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Statements" basePackage="org.uppaal.model" resource="XML"
+    <nestedGenPackages prefix="Statements" basePackage="org.uppaal" resource="XML"
         disposableProviderFactory="true" ecorePackage="uppaal.ecore#//statements">
       <genClasses image="false" ecoreClass="uppaal.ecore#//statements/Statement"/>
       <genClasses ecoreClass="uppaal.ecore#//statements/Block">
@@ -238,7 +238,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//statements/ExpressionStatement/expression"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Expressions" basePackage="org.uppaal.model" resource="XML"
+    <nestedGenPackages prefix="Expressions" basePackage="org.uppaal" resource="XML"
         disposableProviderFactory="true" ecorePackage="uppaal.ecore#//expressions">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//expressions/AssignmentOperator">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/AssignmentOperator/EQUAL"/>
@@ -374,7 +374,7 @@
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//expressions/Deadlock"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Visuals" basePackage="org.uppaal.model" disposableProviderFactory="true"
+    <nestedGenPackages prefix="Visuals" basePackage="org.uppaal" disposableProviderFactory="true"
         ecorePackage="uppaal.ecore#//visuals">
       <genClasses image="false" ecoreClass="uppaal.ecore#//visuals/ColoredElement">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//visuals/ColoredElement/colorCode"/>
@@ -390,7 +390,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//visuals/Point/y"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Queries" basePackage="org.uppaal.model" disposableProviderFactory="true"
+    <nestedGenPackages prefix="Queries" basePackage="org.uppaal" disposableProviderFactory="true"
         ecorePackage="uppaal.ecore#//queries">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//queries/PathQuantifier">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//queries/PathQuantifier/EXISTS"/>
