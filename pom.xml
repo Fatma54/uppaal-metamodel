@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.muml.uppaal</groupId>
-	<artifactId>org.muml.uppaal.parent</artifactId>
+	<groupId>org.uppaal.model</groupId>
+	<artifactId>org.uppaal.model.parent</artifactId>
 	<version>${releaseVersion}${qualifier}</version>
 	<packaging>pom</packaging>
 
@@ -42,11 +42,11 @@
 	</properties>
 
 	<modules>
-		<module>org.muml.uppaal</module>
-		<module>org.muml.uppaal.edit</module>
-		<module>org.muml.uppaal.editor</module>
-		<module>org.muml.uppaal.platform</module>
-		<module>org.muml.uppaal.package</module>
+		<module>org.uppaal.model</module>
+		<module>org.uppaal.model.edit</module>
+		<module>org.uppaal.model.editor</module>
+		<module>org.uppaal.model.platform</module>
+		<module>org.uppaal.model.package</module>
 	</modules>
 
 	<build>
@@ -172,8 +172,8 @@
 					<configuration>
 						<target>
 							<artifact>
-								<groupId>org.muml.uppaal</groupId>
-								<artifactId>org.muml.uppaal.platform</artifactId>
+								<groupId>org.uppaal.model</groupId>
+								<artifactId>org.uppaal.model.platform</artifactId>
 								<version>${project.version}</version>
 							</artifact>
 						</target>

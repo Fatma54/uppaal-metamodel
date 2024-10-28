@@ -31,4 +31,4 @@ jobs:
        uses: actions/upload-artifact@v3
        with:
          name: packaged-bundles
-         path: ./org.muml.uppaal.package/target/*.zip
+         path: ./org.uppaal.model.package/target/*.zip

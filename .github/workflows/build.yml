@@ -47,4 +47,4 @@ jobs:
       if: runner.os == 'Linux'
       with:
          name: packaged-bundles
-         path: ./org.muml.uppaal.package/target/*.zip
+         path: ./org.uppaal.model.package/target/*.zip

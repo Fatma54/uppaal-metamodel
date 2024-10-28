@@ -39,15 +39,15 @@ to point to their install directory:
 You can build from the root directory by executing `./mvnw compile` on Linux and
 MacOS and by `mvnw.cmd compile` on Windows respectively.
 
-Note that code generation from the `org.muml.uppaal/model/uppaal.genmodel` Generator Model
+Note that code generation from the `org.uppaal.model/model/uppaal.genmodel` Generator Model
 is part of the build process and therefore generated sources are *not* checked in.
 Code Generation is conducted during the built via a Modelling Workflow described in
-`org.muml.uppaal/src/org/muml/uppaal/GenerateModel.mw2`. 
+`org.uppaal.model/src/org/uppaal/GenerateModel.mwe2`. 
 
 ## Packaging
 To retrieve installable packages execute the `package` maven goal.
-Binary and source bundles are aggregated under `org.muml.uppaal.package/target`
-(See the descriptors under `org.muml.uppaal.package/src/assembly/`).
+Binary and source bundles are aggregated under `org.uppaal.model.package/target`
+(See the descriptors under `org.uppaal.model.package/src/assembly/`).
 
 The `package` goal also tries to resolve all `p2` dependencies to real maven ones
 and strip all build-related configuration from the `pom.xml` files.
