@@ -30,8 +30,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//core/IdentifiableElement/id"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Types" basePackage="org.uppaal" resource="XML"
-        disposableProviderFactory="true" ecorePackage="uppaal.ecore#//types">
+    <nestedGenPackages prefix="Types" basePackage="org.uppaal" resource="XML" disposableProviderFactory="true"
+        ecorePackage="uppaal.ecore#//types">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//types/BuiltInType">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//types/BuiltInType/INT"/>
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//types/BuiltInType/CLOCK"/>
@@ -118,8 +118,8 @@
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//declarations/TypedDeclaration"/>
       <genClasses ecoreClass="uppaal.ecore#//declarations/ParameterContainer"/>
-      <nestedGenPackages prefix="Global" basePackage="org.uppaal.declarations"
-          resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/global">
+      <nestedGenPackages prefix="Global" basePackage="org.uppaal.declarations" resource="XML"
+          disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/global">
         <genClasses ecoreClass="uppaal.ecore#//declarations/global/ChannelPriorityDeclaration">
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//declarations/global/ChannelPriorityDeclaration/groups"/>
         </genClasses>
@@ -132,8 +132,8 @@
         </genClasses>
         <genClasses ecoreClass="uppaal.ecore#//declarations/global/DefaultItem"/>
       </nestedGenPackages>
-      <nestedGenPackages prefix="System" basePackage="org.uppaal.declarations"
-          resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/system">
+      <nestedGenPackages prefix="System" basePackage="org.uppaal.declarations" resource="XML"
+          disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations/system">
         <genClasses ecoreClass="uppaal.ecore#//declarations/system/TemplateDeclaration">
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//declarations/system/TemplateDeclaration/declaredTemplate"/>
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//declarations/system/TemplateDeclaration/argument"/>

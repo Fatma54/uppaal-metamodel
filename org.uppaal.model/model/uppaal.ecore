@@ -664,8 +664,7 @@
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
-  <eSubpackages name="templates" nsURI="http://www.uppaal.org/templates/1.0.0"
-      nsPrefix="templates">
+  <eSubpackages name="templates" nsURI="http://www.uppaal.org/templates/1.0.0" nsPrefix="templates">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -910,8 +909,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="statements" nsURI="http://www.uppaal.org/statements/1.0.0"
-      nsPrefix="statements">
+  <eSubpackages name="statements" nsURI="http://www.uppaal.org/statements/1.0.0" nsPrefix="statements">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -1343,7 +1341,8 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IncrementDecrementExpression" eSuperTypes="#//expressions/Expression">
+    <eClassifiers xsi:type="ecore:EClass" name="IncrementDecrementExpression" abstract="true"
+        eSuperTypes="#//expressions/Expression">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Abstract base class for expressions describing increment (++) or decrement (--) of an integer-based expression. "/>
       </eAnnotations>
