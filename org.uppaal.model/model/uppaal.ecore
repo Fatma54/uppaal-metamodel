@@ -169,6 +169,7 @@
       <eLiterals name="CHAN" value="2" literal="chan"/>
       <eLiterals name="BOOL" value="3" literal="bool"/>
       <eLiterals name="VOID" value="4" literal="void"/>
+      <eLiterals name="DOUBLE" value="5" literal="double"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DeclaredType" eSuperTypes="#//types/Type">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -745,6 +746,8 @@
           <details key="documentation" value="The initial location of this template."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="branchPoint" upperBound="-1"
+          eType="#//templates/BranchPoint" containment="true" eOpposite="#//templates/BranchPoint/parentTemplate"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RedefinedTemplate" eSuperTypes="#//templates/AbstractTemplate">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -763,7 +766,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//core/NamedElement #//core/CommentableElement #//visuals/PlanarElement #//visuals/ColoredElement #//core/IdentifiableElement">
+    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//core/NamedElement #//core/CommentableElement #//visuals/ColoredElement #//templates/AbstractLocation">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="Location"/>
         <details key="kind" value="empty"/>
@@ -789,6 +792,8 @@
           <details key="documentation" value="Specifies the kind of location (default, urgent, or committed)."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="exponentialRate" eType="#//expressions/Expression"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="LocationKind">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -862,6 +867,10 @@
           <details key="documentation" value="A set of non-deterministic value selections."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="controllable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="probabilityWeight" eType="#//expressions/Expression"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Synchronization">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -904,11 +913,16 @@
         <details key="documentation" value="A non-deterministic selection of a value from a range. The range is specified by a bounded type."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AbstractLocation" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractLocation" abstract="true"
+        eSuperTypes="#//core/IdentifiableElement #//visuals/PlanarElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="incomingEdges" upperBound="-1"
           eType="#//templates/Edge" eOpposite="#//templates/Edge/target"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingEdges" upperBound="-1"
           eType="#//templates/Edge" eOpposite="#//templates/Edge/source"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BranchPoint" eSuperTypes="#//templates/AbstractLocation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentTemplate" lowerBound="1"
+          eType="#//templates/Template" eOpposite="#//templates/Template/branchPoint"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="statements" nsURI="http://www.uppaal.org/statements/1.0.0" nsPrefix="statements">

@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="ASCII"?>
-<types:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.uppaal.org/types/1.0.0" xsi:schemaLocation="http://www.uppaal.org/types/1.0.0 uppaal.ecore#//types">
-  <types name="int"/>
-  <types name="bool" type="bool"/>
-  <types name="clock" type="clock"/>
-  <types name="chan" type="chan"/>
-  <types name="void" type="void"/>
-</types:Library>
+<xmi:XMI xmi:version="20131001"
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:types="http://www.uppaal.org/types/1.0.0"
+    xsi:schemaLocation="http://www.uppaal.org/types/1.0.0 uppaal.ecore#//types">
+  <types:Library>
+    <types xmi:type="types:PredefinedType"
+        name="int"/>
+    <types xmi:type="types:PredefinedType"
+        name="bool"
+        type="bool"/>
+    <types xmi:type="types:PredefinedType"
+        name="clock"
+        type="clock"/>
+    <types xmi:type="types:PredefinedType"
+        name="chan"
+        type="chan"/>
+    <types xmi:type="types:PredefinedType"
+        name="void"
+        type="void"/>
+    <types xmi:type="types:PredefinedType"
+        xmi:id="_J2KUAJrYEe-vfJzHesbZ1w"
+        name="double"
+        type="double"/>
+  </types:Library>
+</xmi:XMI>
