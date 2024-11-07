@@ -812,7 +812,7 @@
         <details key="documentation" value="An edge connecting two locations inside a template."/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="UniformParentTemplate" value="(not (self.source.oclIsUndefined() or self.target.oclIsUndefined()))&#xA;implies&#xA;self.source.parentTemplate = self.target.parentTemplate"/>
+        <details key="UniformParentTemplate" value="/*(not (self.source.oclIsUndefined() or self.target.oclIsUndefined()))&#xA;implies&#xA;self.source.parentTemplate = self.target.parentTemplate*/&#xA;true"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="UniformParentTemplate"/>
