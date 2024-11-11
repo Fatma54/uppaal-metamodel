@@ -64,7 +64,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eSubpackages name="core" nsURI="http://www.uppaal.org/core/1.0.0" nsPrefix="core">
+  <eSubpackages name="core" nsURI="http://www.uppaal.org/1.0.0/core" nsPrefix="core">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -129,7 +129,7 @@
           iD="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="types" nsURI="http://www.uppaal.org/types/1.0.0" nsPrefix="types">
+  <eSubpackages name="types" nsURI="http://www.uppaal.org/1.0.0/types" nsPrefix="types">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -261,7 +261,7 @@
           eType="#//types/PredefinedType" containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="declarations" nsURI="http://www.uppaal.org/declarations/1.0.0"
+  <eSubpackages name="declarations" nsURI="http://www.uppaal.org/1.0.0/declarations"
       nsPrefix="declarations">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -522,7 +522,7 @@
         <details key="constraints" value="SingleParameter ParametersOnly"/>
       </eAnnotations>
     </eClassifiers>
-    <eSubpackages name="global" nsURI="http://www.uppaal.org/declarations/global"
+    <eSubpackages name="global" nsURI="http://www.uppaal.org/1.0.0/declarations/global"
         nsPrefix="global">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -585,7 +585,7 @@
         </eAnnotations>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="system" nsURI="http://www.uppaal.org/declarations/system"
+    <eSubpackages name="system" nsURI="http://www.uppaal.org/1.0.0/declarations/system"
         nsPrefix="system">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -664,7 +664,7 @@
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
-  <eSubpackages name="templates" nsURI="http://www.uppaal.org/templates/1.0.0" nsPrefix="templates">
+  <eSubpackages name="templates" nsURI="http://www.uppaal.org/1.0.0/templates" nsPrefix="templates">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -909,7 +909,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="statements" nsURI="http://www.uppaal.org/statements/1.0.0" nsPrefix="statements">
+  <eSubpackages name="statements" nsURI="http://www.uppaal.org/1.0.0/statements" nsPrefix="statements">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -1071,7 +1071,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="expressions" nsURI="http://www.uppaal.org/expressions/1.0.0"
+  <eSubpackages name="expressions" nsURI="http://www.uppaal.org/1.0.0/expressions"
       nsPrefix="expressions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -1477,7 +1477,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Deadlock" eSuperTypes="#//expressions/Expression"/>
   </eSubpackages>
-  <eSubpackages name="visuals" nsURI="http://www.uppaal.org/visuals/1.0.0" nsPrefix="visuals">
+  <eSubpackages name="visuals" nsURI="http://www.uppaal.org/1.0.0/visuals" nsPrefix="visuals">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -1536,7 +1536,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="queries" nsURI="http://www.uppaal.org/queries/1.0.0" nsPrefix="queries">
+  <eSubpackages name="queries" nsURI="http://www.uppaal.org/1.0.0/queries" nsPrefix="queries">
     <eClassifiers xsi:type="ecore:EClass" name="UnaryQuery" eSuperTypes="#//queries/Query"/>
     <eClassifiers xsi:type="ecore:EClass" name="QuantifiedTemporalQuery" eSuperTypes="#//queries/UnaryQuery">
       <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
