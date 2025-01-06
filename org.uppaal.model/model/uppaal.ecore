@@ -73,7 +73,20 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Contains abstract general purpose classes."/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="CallableElement" abstract="true" eSuperTypes="#//core/NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CallableElement" abstract="true" eSuperTypes="#//core/NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="UniqueParameterNames" value="self.parameter->collect(elements)->select(e | e.oclIsKindOf(uppaal::core::NamedElement))->collect(oclAsType(uppaal::core::NamedElement))->isUnique(name)"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="UniqueParameterNames"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+          eType="#//declarations/ParameterContainer" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The function's parameters."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Abstract base class for named model elements."/>
@@ -360,24 +373,17 @@
     <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//core/CallableElement #//core/TypedElement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="ValidReturnType" value="(not typeDefinition.oclIsUndefined())&#xD;&#xA;implies&#xD;&#xA;(&#xD;&#xA;&#x9;(&#xD;&#xA;&#x9;&#x9;typeDefinition.oclIsKindOf(uppaal::expressions::IdentifierExpression) and&#xD;&#xA;&#x9;&#x9;typeDefinition.oclAsType(uppaal::expressions::IdentifierExpression).identifier.oclIsKindOf(uppaal::types::Type) and&#xD;&#xA;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;typeDefinition.oclAsType(uppaal::expressions::IdentifierExpression).identifier.oclAsType(uppaal::types::Type).baseType = uppaal::types::BuiltInType::VOID or&#xD;&#xA;&#x9;&#x9;&#x9;typeDefinition.oclAsType(uppaal::expressions::IdentifierExpression).identifier.oclAsType(uppaal::types::Type).baseType = uppaal::types::BuiltInType::INT or&#xD;&#xA;&#x9;&#x9;&#x9;typeDefinition.oclAsType(uppaal::expressions::IdentifierExpression).identifier.oclAsType(uppaal::types::Type).baseType = uppaal::types::BuiltInType::BOOL&#xD;&#xA;&#x9;&#x9;)&#xD;&#xA;&#x9;)&#xD;&#xA;&#x9;or&#xD;&#xA;&#x9;&#x9;typeDefinition.oclIsKindOf(uppaal::types::RangeTypeSpecification)&#xD;&#xA;)"/>
-        <details key="UniqueParameterNames" value="self.parameter->collect(elements)->select(e | e.oclIsKindOf(uppaal::core::NamedElement))->collect(oclAsType(uppaal::core::NamedElement))->isUnique(name)"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A function with a return type and optional parameters."/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="ValidReturnType UniqueParameterNames"/>
+        <details key="constraints" value="ValidReturnType"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1"
           eType="#//statements/Block" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The block of statements representing the function body."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-          eType="#//declarations/ParameterContainer" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The function's parameters."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -678,18 +684,6 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Abstract base class for ordinary timed automata templates as well as redefined templates."/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="UniqueParameterNames" value="self.parameter->collect(elements)->collect(oclAsType(core::NamedElement))->isUnique(name)"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="UniqueParameterNames"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-          eType="#//declarations/ParameterContainer" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The parameter declarations of the template."/>
-        </eAnnotations>
-      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Template" eSuperTypes="#//templates/AbstractTemplate">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1242,18 +1236,18 @@
       <eLiterals name="OR" value="1" literal="or"/>
       <eLiterals name="IMPLY" value="2" literal="imply"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FunctionCallExpression" eSuperTypes="#//expressions/Expression">
+    <eClassifiers xsi:type="ecore:EClass" name="CallExpression" eSuperTypes="#//expressions/Expression">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An expression representing a call to a function."/>
+        <details key="documentation" value="An expression representing a call (e.g., to a function or template)."/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="NumberOfArgumentsMatchesDeclaration" value="(not self.function.oclIsUndefined())&#xD;&#xA;implies&#xD;&#xA;self.argument->size() = self.function.parameter->size()"/>
+        <details key="NumberOfArgumentsMatchesDeclaration" value="(not self.callee.oclIsUndefined())&#xA;implies&#xA;self.argument->size() = self.callee.parameter->size()"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="NumberOfArgumentsMatchesDeclaration"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
-          eType="#//declarations/Function">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="callee" lowerBound="1"
+          eType="#//core/CallableElement">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The function to be called."/>
         </eAnnotations>
