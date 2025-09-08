@@ -151,7 +151,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PredefinedType" eSuperTypes="#//types/Type">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="One of the predefined types 'int', 'bool', 'chan', 'clock' or 'void'."/>
+        <details key="documentation" value="One of the predefined types 'int', 'bool', 'chan', 'clock', 'void' or 'double'."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
           eType="#//types/BuiltInType">

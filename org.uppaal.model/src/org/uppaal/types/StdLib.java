@@ -18,8 +18,10 @@ public class StdLib {
 	public static final PredefinedType VOID = getType(BuiltInType.VOID.getLiteral());
 	public static final PredefinedType CHAN = getType(BuiltInType.CHAN.getLiteral());
 	public static final PredefinedType CLOCK = getType(BuiltInType.CLOCK.getLiteral());
+	public static final PredefinedType DOUBLE = getType(BuiltInType.DOUBLE.getLiteral());
+
 	
-	public static final Iterable<PredefinedType> ALL_TYPES = List.of(BOOL, INT, VOID, CHAN, CLOCK);
+	public static final Iterable<PredefinedType> ALL_TYPES = List.of(BOOL, INT, VOID, CHAN, CLOCK, DOUBLE);
 	
 	private static PredefinedType getType(final String name) {
 		for (PredefinedType type : INSTANCE.getTypes()) {
